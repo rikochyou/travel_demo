@@ -41,11 +41,12 @@ export default{
 <style lang="stylus" scoped>
   .wrapper >>> .swiper-pagination-bullet-active //穿透scop限制
     background: #fff
+  .wrapper >>> .swiper-container-horizontal
+    height: 31.25vh
   .wrapper //网速调成3g防抖动
     overflow: hidden
     width: 100%
-    height: 0
-    padding-bottom: 100%
+    height: 31.25vh
     .swiper-img
       width: 100%
       height: 100%
