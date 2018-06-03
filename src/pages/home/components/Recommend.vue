@@ -2,8 +2,8 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
-        <img class="item-img" src="https://dimg03.c-ctrip.com/images/100v050000000m7urF774_C_200_200_Q60.jpg">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://dimg03.c-ctrip.com/images/100v050000000m7urF774_C_200_200_Q60.jpg',
-        title: '上海迪士尼度假区',
-        desc: '主题乐园'
-      }, {
-        id: '0002',
-        imgUrl: 'https://dimg03.c-ctrip.com/images/100v050000000m7urF774_C_200_200_Q60.jpg',
-        title: '上海迪士尼度假区',
-        desc: '主题乐园'
-      }, {
-        id: '0003',
-        imgUrl: 'https://dimg03.c-ctrip.com/images/100v050000000m7urF774_C_200_200_Q60.jpg',
-        title: '上海迪士尼度假区',
-        desc: '主题乐园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
